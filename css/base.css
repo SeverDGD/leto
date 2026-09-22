@@ -1,0 +1,102 @@
+html {
+    color-scheme: light;
+    --font-main: 'Marck Script', 'Bad Script', cursive;
+    --font-ui: Arial, Helvetica, sans-serif;
+    --color-bg: #ffffff;
+    --color-text: #14121a;
+    --color-accent: #7f22c0;
+    --color-bar: #7f22c0;
+    --color-on-bar: #ffffff;
+    --color-surface: #f3eaf9;
+    --color-banner: #0f1923;
+    --color-banner-border: #0f1923;
+    --color-on-banner: #ffffff;
+    --color-telegram: #2aabee;
+    --color-on-telegram: #ffffff;
+    --container-width: 55rem;
+    --page-gutter: 1rem;
+    --header-height: 3rem;
+    --section-gap: 3rem;
+    --frame-width: 0.75rem;
+    --photo-radius: 1.75rem;
+    --wave-height: 2rem;
+    --font-size-text: 1.125rem;
+    --font-size-title: 1.75rem;
+    scroll-padding-top: 4rem;
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --color-bg: #16111d;
+    --color-text: #eee7f5;
+    --color-accent: #a35de0;
+    --color-bar: #4b1774;
+    --color-surface: #251c31;
+    --color-banner-border: #a35de0;
+}
+
+@media (min-width: 1024px) {
+    html {
+        --section-gap: 7rem;
+        --frame-width: 1rem;
+        --photo-radius: 3.5rem;
+        --wave-height: 3.5rem;
+        --font-size-text: 1.25rem;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+p,
+figure,
+ul {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 0.125rem solid var(--color-accent);
+    outline-offset: 0.25rem;
+}
+
+.page {
+    margin: 0;
+    font-family: var(--font-main);
+    font-size: var(--font-size-text);
+    line-height: 1.25;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    hyphens: auto;
+}
+
+.page__main {
+    width: min(100% - 2 * var(--page-gutter), var(--container-width));
+    margin-inline: auto;
+}
+
+.move__title,
+.work__title,
+.party__title,
+.ask__title,
+.end__title,
+.carousel__title {
+    font-size: var(--font-size-title);
+    font-weight: 400;
+    text-align: center;
+}

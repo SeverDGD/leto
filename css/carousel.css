@@ -1,0 +1,52 @@
+.carousel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: min(100%, 40rem);
+    margin-inline: auto;
+    margin-top: var(--section-gap);
+}
+
+.carousel__title {
+    grid-column: 1 / -1;
+}
+
+.carousel__track {
+    grid-column: 1 / -1;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background-color: var(--color-surface);
+}
+
+.carousel__slide {
+    display: none;
+    height: 100%;
+}
+
+.carousel__slide--active {
+    display: block;
+}
+
+.carousel__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.carousel__button {
+    padding: 0.5rem 1rem;
+    border: 0;
+    background-color: var(--color-bar);
+    color: var(--color-on-bar);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.carousel__button--prev {
+    justify-self: start;
+}
+
+.carousel__button--next {
+    justify-self: end;
+}
